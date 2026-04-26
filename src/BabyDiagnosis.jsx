@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-const TOP_IMG = "/images/TOPimage.png";
-const TANPOPO_IMG = "/images/tanpopo.png";
-const ORCHID_IMG = "/images/orchid.png";
-const TULIP_IMG = "/images/tulip.png";
+const TOP_IMG = "/images/TOPimage_small.jpg";
+const TANPOPO_IMG = "/images/tanpopo.jpg";
+const ORCHID_IMG = "/images/orchid.jpg";
+const TULIP_IMG = "/images/tulip.jpg";
 
 const questions = [
   { q: "初めての場所に行ったとき、うちの子は？", options: [ { text: "わりとすぐ慣れる", type: "tanpopo" }, { text: "少し緊張して様子を見る", type: "tulip" }, { text: "慣れるまで時間はかかるが、落ち着けば楽しめる", type: "orchid" } ] },
