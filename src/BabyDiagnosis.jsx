@@ -81,7 +81,7 @@ function QuestionPage({ index, onAnswer }) {
         </div>
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
           {q.options.map((opt, i) => (
-            <button key={i} onClick={() => onAnswer(opt.type)} style={{width:"100%",padding:"18px 20px",fontSize:15,fontWeight:"500",color:"#444",background:"white",border:"2px solid #f0e0fa",borderRadius:16,cursor:"pointer",textAlign:"left",lineHeight:1.6,boxShadow:"0 2px 10px rgba(0,0,0,0.05)"}}>
+            <button key={i} onClick={() => onAnswer(opt.type)} style={{width:"100%",padding:"18px 20px",fontSize:15,fontWeight:"500",color:"#444",background:"#fdf5ff",border:"2px solid #e8c8f8",borderRadius:16,cursor:"pointer",textAlign:"left",lineHeight:1.6,boxShadow:"0 2px 10px rgba(0,0,0,0.05)"}}>
               {opt.text}
             </button>
           ))}
