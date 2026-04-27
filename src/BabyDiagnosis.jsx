@@ -5,6 +5,8 @@ const TANPOPO_IMG = "/images/tanpopo.jpg";
 const ORCHID_IMG = "/images/orchid.jpg";
 const TULIP_IMG = "/images/tulip.jpg";
 
+const THEORY = "この診断は、子どもの感受性の違いを説明する、発達心理学・小児科学者トム・ボイス博士らの研究「たんぽぽ・オーキッド理論」をもとにしています。実際の子どもはその間にあることも多いため、本診断では「チューリップタイプ」も含めて捉えています。結果に良い悪いはありません。大切なのは、タイプに合った関わり方を知ることです。";
+
 const questions = [
   { q: "初めての場所に行ったとき、うちの子は？", options: [ { text: "わりとすぐ慣れる", type: "tanpopo" }, { text: "少し緊張して様子を見る", type: "tulip" }, { text: "慣れるまで時間はかかるが、落ち着けば楽しめる", type: "orchid" } ] },
   { q: "大きな音や急な変化があると？", options: [ { text: "反応はするが、抱っこや声かけで落ち着く", type: "tulip" }, { text: "びっくりして泣きやすい", type: "orchid" }, { text: "あまり気にせず過ごす", type: "tanpopo" } ] },
@@ -52,7 +54,7 @@ function TopPage({ onStart }) {
         <button onClick={onStart} style={{marginTop:28,width:"100%",padding:"18px 0",fontSize:18,fontWeight:"bold",color:"white",background:"linear-gradient(135deg,#c084e8 0%,#f4a4a4 100%)",border:"none",borderRadius:99,cursor:"pointer",boxShadow:"0 6px 24px rgba(192,132,232,0.4)"}}>
           診断スタート
         </button>
-        <p style={{marginTop:14,fontSize:12,color:"#bbb"}}>無料・登録不要</p>
+        <p style={{marginTop:14,fontSize:12,color:"#bbb",textAlign:"center",lineHeight:2}}>発達心理学の理論をベースにした診断です<br/>無料・登録不要</p>
       </div>
     </div>
   );
@@ -106,6 +108,10 @@ function ResultPage({ resultKey }) {
           {r.text.map((t,i) => (
             <p key={i} style={{margin:i===0?"0 0 14px":"14px 0",fontSize:15,color:"#444",lineHeight:1.8,whiteSpace:"pre-line"}}>{t}</p>
           ))}
+        </div>
+        <div style={{background:"#f8f8f8",borderRadius:16,padding:"16px 18px",marginTop:20}}>
+          <p style={{margin:"0 0 8px",fontSize:12,fontWeight:"bold",color:"#888"}}>この診断について</p>
+          <p style={{margin:0,fontSize:13,color:"#666",lineHeight:1.8}}>{THEORY}</p>
         </div>
         <div style={{background:`linear-gradient(135deg,${r.color}22,${r.color}11)`,border:`1.5px solid ${r.color}55`,borderRadius:20,padding:"20px",marginTop:20}}>
           <p style={{margin:"0 0 6px",fontSize:12,fontWeight:"bold",color:r.accent}}>NEXT STEP</p>
